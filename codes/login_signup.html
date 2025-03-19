@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Login Page</title>
+     <link rel="stylesheet" href="styles_login_signup.css">
+</head>
+
+<body>
+     <section class="login-section" id="login-section">
+          <div class="container">
+               <div class="content login-content">
+                    <h1>LOGIN</h1>
+                    <form action="#">
+                         <label for="usn"><input id="usn" type="text" placeholder="e.g., 1MS23CS001"></label>
+                         <label for="password"><input id="password" type="password" placeholder="Password"></label>
+                         <a href="#">Forget Your Password?</a>
+                         <input type="submit" value="LOGIN">
+                    </form>
+               </div>
+               <div class="content login-side-content">
+                    <h1>Hello, Friend!</h1>
+                    <p>Register with your personal details to use all of site features</p>
+                    <a href="#" onclick="toggleSection()">SIGN UP</a>
+               </div>
+          </div>
+     </section>
+
+     <section class="signup-section" id="signup-section">
+          <div class="container">
+               <div class="content signup-side-content">
+                    <h1>Welcome, Back!</h1>
+                    <p>Enter your personal details to use all of site features</p>
+                    <a href="#" onclick="toggleSection()">SIGN IN</a>
+               </div>
+               <div class=" content signup-content">
+                         <h1>SignUp</h1>
+                         <form action="#">
+                              <label for="name">
+                                   <input type="text" placeholder="Name">
+                              </label>
+                              <label for="usn"><input id="usn" type="text" placeholder="e.g., 1MS23CS001"></label>
+                              <select name="semester" id="sem">
+                                   <option value="">Select semester</option>
+                                   <option value="1">I</option>
+                                   <option value="2">II</option>
+                                   <option value="3">III</option>
+                                   <option value="4">VI</option>
+                                   <option value="5">V</option>
+                                   <option value="6">IX</option>
+                                   <option value="7">IIX</option>
+                                   <option value="8">IIIX</option>
+                              </select>
+                              <label for="email">
+                                   <input type="email" placeholder="Email">
+                              </label>
+                              <label for="password"><input id="password" type="password" placeholder="Password"></label>
+                              <input type="submit" value="SIGN UP">
+                         </form>
+               </div>
+          </div>
+     </section>
+
+     <script>
+          function toggleSection() {
+               var login = document.getElementById("login-section");
+               var signup = document.getElementById("signup-section");
+               
+               if (login.style.display === "none") {
+                    login.style.display = "block";
+                    signup.style.display = "none";
+               } else {
+                    login.style.display = "none";
+                    signup.style.display = "block";
+               }
+          }
+     </script>
+
+</body>
+
+</html>
