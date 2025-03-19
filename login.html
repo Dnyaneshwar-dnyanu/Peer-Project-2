@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Login Page</title>
+     <style>
+          * {
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+               font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          }
+
+          section {
+               height: 100vh;
+               background-color: rgb(86, 33, 33);
+               display: flex;
+               justify-content: center;
+               align-items: center;
+          }
+          .container {
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               height: 70vh;
+               width: 70vw;
+               max-width: 60vw;
+               background-color: white;
+               border-radius: 20px;
+          }
+
+          /* Login Section */
+
+          .content-login {
+               width: 50%;
+               padding: 0.5rem 1rem;
+               text-align: center;
+          }
+
+          .content-login label {
+               display: block;
+               margin: 1rem 0;
+          }
+
+          .content-login input {
+               width: 70%;
+               padding: 0.5rem;
+               background-color: rgb(221, 222, 222);
+               border: none;
+               border-radius: 5px;
+               font-size: 0.9rem;
+               font-weight: 600;
+          }
+
+          .content-login form a {
+               text-decoration: none;
+               color: black;
+               padding: 2rem 0;
+          }
+
+          .content-login input[type="submit"] {
+               width: 40%;
+               background-color: #b82226;
+               display: block;
+               margin: 1rem auto;
+               cursor: pointer;
+          }
+
+          /* Signup Section */
+          .content-signup {
+               width: 50%;
+               height: 100%;
+
+               border-radius: 18px;
+               border-top-left-radius: 35%;
+               border-bottom-left-radius: 25%;
+               
+               text-align: center;
+               background-color: #1d2531;
+               color: white;
+          }
+
+          .content-signup {
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               gap: 20px;
+               padding: 1rem;
+          }
+
+          .content-signup a {
+               text-decoration: none;
+               color: white;
+               width: 40%;
+               align-self: center;
+               padding: 0.3rem 0;
+               border: 2px solid white;
+               border-radius: 5px;
+          }
+
+     </style>
+</head>
+
+<body>
+     <section class="login-section"> 
+          <div class="container">
+               <div class="content-login">
+                    <h1>LOGIN</h1>
+                    <form action="#">
+                         <label for="usn"><input id="usn" type="text" placeholder="e.g., 1MS23CS001"></label>
+                         <label for="password"><input id="password" type="password" placeholder="Password"></label>
+                         <a href="#">Forget Your Password?</a>
+                         <input type="submit" value="Login">
+                    </form>
+               </div>
+               <div class="content-signup">
+                    <h1>Hello, Friend!</h1>
+                    <p>Register with your personal details to use all of site features</p>
+                    <a href="signin.html">Sign Up</a>
+               </div>
+          </div>
+     </section>
+</body>
+</html>
