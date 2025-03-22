@@ -5,7 +5,136 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Login Page</title>
-     <link rel="stylesheet" href="styles_login_signup.css">
+     <style>
+          * {
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+               font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          }
+
+          body {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               height: 100vh;
+               background-color: rgb(86, 33, 33);
+          }
+
+          section {
+               position: absolute;
+               border-radius: 10px;
+               box-shadow: 10px 12px 10px #1d2531;
+               transition: all 0.3s ease-in-out;
+          }
+
+          #login-section,
+          #signup-section {
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+          }
+
+          #signup-section {
+               display: none;
+          }
+
+          .container {
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               height: 70vh;
+               width: 70vw;
+               background-color: white;
+               border-radius: 20px;
+          }
+
+          .content {
+               width: 50%;
+               padding: 0.5rem;
+               text-align: center;
+          }
+
+          .content label,
+          .content a {
+               display: block;
+               margin: 1rem 0;
+          }
+
+          .content input,
+          .content select {
+               width: 70%;
+               padding: 0.5rem;
+               background-color: rgba(189, 190, 190, 0.816);
+               border: none;
+               border-radius: 5px;
+               font-size: 0.9rem;
+               font-weight: 600;
+          }
+
+          .content input[type="submit"] {
+               width: 40%;
+               background-color: #b82226;
+               display: block;
+               margin: 1rem auto;
+               cursor: pointer;
+          }
+
+          .content a {
+               text-decoration: none;
+          }
+
+          .login-side-content,
+          .signup-side-content {
+               width: 50%;
+               height: 100%;
+               text-align: center;
+               background-color: #1d2531;
+               color: white;
+          }
+
+          .login-side-content,
+          .signup-side-content {
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               gap: 20px;
+               padding: 1rem;
+          }
+
+          .signup-side-content {
+               border-radius: 18px;
+               border-top-right-radius: 35%;
+               border-bottom-right-radius: 25%;
+          }
+
+          .login-side-content {
+               border-radius: 18px;
+               border-top-left-radius: 35%;
+               border-bottom-left-radius: 25%;
+          }
+
+          .login-side-content a,
+          .signup-side-content a {
+               text-decoration: none;
+               color: white;
+               width: 40%;
+               align-self: center;
+               padding: 0.3rem 0;
+               border: 2px solid white;
+               border-radius: 5px;
+          }
+
+          .login-content a {
+               color: #1d2531;
+          }
+
+          @media (min-width: 1200px) {
+               .container {
+                    max-width: 50vw;
+               }
+          }
+     </style>
 </head>
 
 <body>
@@ -36,29 +165,29 @@
                     <a href="#" onclick="toggleSection()">SIGN IN</a>
                </div>
                <div class=" content signup-content">
-                         <h1>SignUp</h1>
-                         <form action="#">
-                              <label for="name">
-                                   <input type="text" placeholder="Name">
-                              </label>
-                              <label for="usn"><input id="usn" type="text" placeholder="e.g., 1MS23CS001"></label>
-                              <select name="semester" id="sem">
-                                   <option value="">Select semester</option>
-                                   <option value="1">I</option>
-                                   <option value="2">II</option>
-                                   <option value="3">III</option>
-                                   <option value="4">VI</option>
-                                   <option value="5">V</option>
-                                   <option value="6">IX</option>
-                                   <option value="7">IIX</option>
-                                   <option value="8">IIIX</option>
-                              </select>
-                              <label for="email">
-                                   <input type="email" placeholder="Email">
-                              </label>
-                              <label for="password"><input id="password" type="password" placeholder="Password"></label>
-                              <input type="submit" value="SIGN UP">
-                         </form>
+                    <h1>SignUp</h1>
+                    <form action="#">
+                         <label for="name">
+                              <input type="text" placeholder="Name">
+                         </label>
+                         <label for="usn"><input id="usn" type="text" placeholder="e.g., 1MS23CS001"></label>
+                         <select name="semester" id="sem">
+                              <option value="">Select semester</option>
+                              <option value="1">I</option>
+                              <option value="2">II</option>
+                              <option value="3">III</option>
+                              <option value="4">VI</option>
+                              <option value="5">V</option>
+                              <option value="6">IX</option>
+                              <option value="7">IIX</option>
+                              <option value="8">IIIX</option>
+                         </select>
+                         <label for="email">
+                              <input type="email" placeholder="Email">
+                         </label>
+                         <label for="password"><input id="password" type="password" placeholder="Password"></label>
+                         <input type="submit" value="SIGN UP">
+                    </form>
                </div>
           </div>
      </section>
@@ -67,7 +196,7 @@
           function toggleSection() {
                var login = document.getElementById("login-section");
                var signup = document.getElementById("signup-section");
-               
+
                if (login.style.display === "none") {
                     login.style.display = "block";
                     signup.style.display = "none";
